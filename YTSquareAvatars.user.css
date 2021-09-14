@@ -1,0 +1,18 @@
+/* ==UserStyle==
+@name           YouTube Square Avatars
+@namespace      github.com/pabli24
+@version        1.0.0
+@description    Changes round avatars to square on YouTube
+@author         Pabli
+@license        MIT
+@homepageURL    https://github.com/pabli24/YTSquareAvatars
+@supportURL     https://github.com/pabli24/YTSquareAvatars/issues
+@preprocessor   stylus
+@var            number radius "border radius (%)" ['%', 5, 0, 50, 1]
+==/UserStyle== */
+
+@-moz-document domain("youtube.com") {
+yt-img-shadow, .image-thumbnail, .subscriber-avatar, .subscriber-info-avatar {
+	border-radius: radius !important;
+}
+}
