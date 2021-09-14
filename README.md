@@ -18,7 +18,7 @@
 ![Screenshot](./img/thumbnail.webp)
 
 ## License
-[MIT](https://github.com/pabli24/YTPlayerHideButtonsWhenPaused/blob/main/LICENSE)
+[MIT](https://github.com/pabli24/YTSquareAvatars/blob/main/LICENSE)
 
 ## My other userstyles
 [![](https://www.google.com/s2/favicons?domain_url=https://greasyfork.org)](https://greasyfork.org/users/124677-pabli) [GreasyFork](https://greasyfork.org/users/124677-pabli) | [![](https://www.google.com/s2/favicons?domain_url=https://userstyles.world)](https://userstyles.world/user/pabli) [UserStyles.world](https://userstyles.world/user/pabli) | 
