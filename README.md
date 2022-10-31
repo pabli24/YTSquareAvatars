@@ -1,5 +1,5 @@
 <div align="center">
-  <h1>YouTube Square Avatars</h1>
+  <h1>YouTube Square Avatars, Videos and Images</h1>
   <a href="https://raw.githubusercontent.com/pabli24/YTSquareAvatars/main/YTSquareAvatars.user.css">
     <img src="https://img.shields.io/badge/Install%20directly%20with-Stylus-285959.svg" alt="Install directly with Stylus"></a>
 
