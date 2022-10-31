@@ -1,18 +1,28 @@
 /* ==UserStyle==
-@name           YouTube Square Avatars
+@name           YouTube Square
 @namespace      github.com/pabli24
-@version        1.0.0
-@description    Changes round avatars to square on YouTube
+@version        1.1.0
+@description    Changes rounded avatars, videos and images to square on YouTube
 @author         Pabli
 @license        MIT
 @homepageURL    https://github.com/pabli24/YTSquareAvatars
 @supportURL     https://github.com/pabli24/YTSquareAvatars/issues
 @preprocessor   stylus
-@var            number radius "border radius (%)" ['%', 5, 0, 50, 1]
+@var            number r "Avatars - border radius (%)" ['%', 0, -1, 50, 1]
+@var            number v "Videos - border radius (px)" ['px', 0, -1, null, 1]
+@var            number i "Images - border radius (px)" ['px', 0, -1, null, 1]
 ==/UserStyle== */
 
 @-moz-document domain("youtube.com") {
-yt-img-shadow, .image-thumbnail, .subscriber-avatar, .subscriber-info-avatar {
-	border-radius: radius !important;
+yt-img-shadow, .image-thumbnail, .subscriber-avatar, .subscriber-info-avatar, tp-yt-paper-icon-button.ytmusic-settings-button {
+	border-radius: r !important
+}
+ytd-thumbnail a.ytd-thumbnail, ytd-thumbnail:before, ytd-playlist-thumbnail a.ytd-playlist-thumbnail, ytd-playlist-thumbnail:before,
+ytmusic-two-row-item-renderer .image.ytmusic-two-row-item-renderer, .image.ytmusic-two-row-item-renderer {
+	border-radius: v !important
+}
+.image-icon-container.ytd-backstage-image-renderer, ytd-backstage-image-renderer[rounded] #image-container.ytd-backstage-image-renderer, yt-img-shadow.ytd-backstage-image-renderer {
+	border-radius: i !important;
+	--yt-img-border-radius: i !important
 }
 }
