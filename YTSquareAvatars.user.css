@@ -1,28 +1,29 @@
 /* ==UserStyle==
 @name           YouTube Square
 @namespace      github.com/pabli24
-@version        1.1.0
+@version        1.1.1
 @description    Changes rounded avatars, videos and images to square on YouTube
 @author         Pabli
 @license        MIT
 @homepageURL    https://github.com/pabli24/YTSquareAvatars
 @supportURL     https://github.com/pabli24/YTSquareAvatars/issues
-@preprocessor   stylus
+@preprocessor   less
 @var            number r "Avatars - border radius (%)" ['%', 0, -1, 50, 1]
 @var            number v "Videos - border radius (px)" ['px', 0, -1, null, 1]
 @var            number i "Images - border radius (px)" ['px', 0, -1, null, 1]
 ==/UserStyle== */
 
 @-moz-document domain("youtube.com") {
-yt-img-shadow, .image-thumbnail, .subscriber-avatar, .subscriber-info-avatar, tp-yt-paper-icon-button.ytmusic-settings-button {
-	border-radius: r !important
-}
-ytd-thumbnail a.ytd-thumbnail, ytd-thumbnail:before, ytd-playlist-thumbnail a.ytd-playlist-thumbnail, ytd-playlist-thumbnail:before,
-ytmusic-two-row-item-renderer .image.ytmusic-two-row-item-renderer, .image.ytmusic-two-row-item-renderer {
-	border-radius: v !important
-}
-.image-icon-container.ytd-backstage-image-renderer, ytd-backstage-image-renderer[rounded] #image-container.ytd-backstage-image-renderer, yt-img-shadow.ytd-backstage-image-renderer {
-	border-radius: i !important;
-	--yt-img-border-radius: i !important
-}
+	yt-img-shadow, .image-thumbnail, .subscriber-avatar, .subscriber-info-avatar, .yt-spec-avatar-shape__image, tp-yt-paper-icon-button.ytmusic-settings-button {
+		border-radius: @r !important;
+	}
+	ytd-thumbnail a.ytd-thumbnail, ytd-thumbnail:before, ytd-playlist-thumbnail a.ytd-playlist-thumbnail, ytd-playlist-thumbnail::before,
+	ytmusic-two-row-item-renderer .image.ytmusic-two-row-item-renderer, .image.ytmusic-two-row-item-renderer, 
+	.player-container-background.ytd-watch-flexy, ytd-watch-flexy[rounded-player] #ytd-player.ytd-watch-flexy, ytd-channel-video-player-renderer[rounded] #player.ytd-channel-video-player-renderer, .yt-thumbnail-view-model--medium {
+		border-radius: @v !important;
+	}
+	.image-icon-container.ytd-backstage-image-renderer, ytd-backstage-image-renderer[rounded] #image-container.ytd-backstage-image-renderer, yt-img-shadow.ytd-backstage-image-renderer, .yt-image-banner-view-model-wiz--inset {
+		border-radius: @i !important;
+		--yt-img-border-radius: @i !important;
+	}
 }
